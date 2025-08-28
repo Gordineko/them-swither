@@ -1,0 +1,25 @@
+/* Базовая (светлая) тема */
+:root {
+  --c-bg: #ffffff;
+  --c-text: #111111;
+  --c-muted: #6b7280;
+  --c-primary: #2563eb;
+  --c-border: #000000;
+}
+
+/* Тёмная тема */
+:root[data-theme="dark"] {
+  --c-bg: #0b0f14;
+  --c-text: #e5e7eb;
+  --c-muted: #9ca3af;
+  --c-primary: #60a5fa;
+  --c-border: #ffffff;
+}
+
+/* Базовая типографика/фон на уровне html/body */
+html,
+body {
+  background: var(--c-bg);
+  color: var(--c-text);
+  transition: 0.3s;
+}

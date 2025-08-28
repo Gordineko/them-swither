@@ -1,0 +1,115 @@
+@forward "theme";
+@forward "tokens";
+@forward "./imports.scss";
+// @forward "./InfoPage.scss";
+// @forward "./fonts.scss";
+
+:root {
+  --font-exo: "Exo 2", sans-serif;
+  --font-montserrat-alt: "Montserrat Alternates", sans-serif;
+  --font-cormorant: "Cormorant Infant", serif;
+}
+
+body {
+  font-family: var(--font-montserrat-alt);
+
+  background-size: cover;
+}
+h1,
+h2,
+h3 {
+  font-family: var(--font-cormorant);
+}
+
+blockquote {
+  font-family: var(--font-cormorant);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  flex: 1;
+}
+.container {
+  max-width: 1230px;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.no-scroll::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  width: var(--scrollbar-width);
+  height: 100vh;
+  background: #ebebeb;
+  pointer-events: none;
+}
+a {
+  color: #0a0a0a;
+  text-decoration: none;
+}
+body {
+  font-style: normal;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+button {
+  cursor: pointer;
+
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.catalogPage__container {
+  display: flex;
+  gap: 20px;
+
+  @media screen and (max-width: 1200px) {
+    gap: 16px;
+  }
+}
+
+.catalogPage__right {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+}
+
+.asidebar {
+  display: block;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}

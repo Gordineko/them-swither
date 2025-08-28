@@ -1,0 +1,11 @@
+// SCSS-переменные → проксируют CSS-переменные
+$color-bg: var(--c-bg);
+$color-text: var(--c-text);
+$color-muted: var(--c-muted);
+$color-primary: var(--c-primary);
+$color-border: var(--c-border);
+
+// Частые шорткаты
+$radius-md: 12px;
+$radius-lg: 20px;
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
